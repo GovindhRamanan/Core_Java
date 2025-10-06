@@ -8,7 +8,7 @@ public class DemoArrayLists{
 		a.add(30);
 		a.add(40);
 		//for(int i=0;i<a.size();i++)System.out.println((Integer)a.get(i));
-		a.add(0, 70);
+		a.insert(0, 70);
 		//for(int i=0;i<a.size();i++)System.out.println((Integer)a.get(i));
 		a.remove(0);
 		//for(int i=0;i<a.size();i++)System.out.println((Integer)a.get(i));

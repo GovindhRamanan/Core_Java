@@ -13,7 +13,7 @@ public class ArrayLists {
 		a[p++]=e;
 	}
 	
-	public void add(int index,Object e) {
+	public void insert(int index,Object e) {
 		//if(p<0||p>=size())-->doubt is cleared, if the index value is less than -1 it shows indexoutofboundexception
 		if(p>=size()) increaseSize();
 		for(int i=size()-1;i>=index;i--)a[i+1]=a[i];
