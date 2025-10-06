@@ -9,8 +9,17 @@ public class DemoLinkedLists {
 		l.add(55);
 		l.add(17);
 		l.add(38);
-		System.out.println(l.size());
-		for(int i=0;i<l.size();i++)System.out.println((Integer)l.get(i));
+		System.out.println(l);
+		l.insert(0, 90);
+		System.out.println(l);
+		l.remove(0);
+		System.out.println(l);
+		l.reverse();
+		System.out.println(l);
+		/*
+		 * System.out.println(l.size()); for(int
+		 * i=0;i<l.size();i++)System.out.println((Integer)l.get(i));
+		 */
 
 	}
 

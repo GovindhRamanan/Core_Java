@@ -67,5 +67,18 @@ public class LinkedList {
 		}
 		return s+"]";
 	}
+	public void reverse() {
+		Node n=null;
+		Node curr=first;
+		Node pre=null;
+		while(curr!=null) {
+			n=curr.next;
+			curr.next=pre;
+			pre=curr;
+			curr=n;
+		}
+		last=first;
+		first=pre;
+	}
 
 }
