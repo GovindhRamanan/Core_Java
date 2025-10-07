@@ -45,7 +45,7 @@ public class LinkedList {
 		if(index<=-1 || index>=size())throw new ArrayIndexOutOfBoundsException();
 		if(index==0) {
 			first=first.next;
-			if(first==null);last=first;
+			if(first==null)last=first;
 			count--;
 			return;
 		}
@@ -59,6 +59,7 @@ public class LinkedList {
 	}
 	@Override
 	public String toString() {
+		if(size()==0)return "[]";
 		String s="["+first.element;
 		Node curr=first;
 		for(int i=1;i<size();i++) {
