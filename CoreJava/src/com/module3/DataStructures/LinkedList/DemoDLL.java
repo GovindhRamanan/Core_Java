@@ -16,6 +16,8 @@ public class DemoDLL {
 		//l.remove(5);
 		l.insert(5, 55);
 		System.out.println(l);
+		l.reverse();
+		System.out.println(l);
 		/*
 		 * System.out.println(l.size()); System.out.println(l);
 		 */

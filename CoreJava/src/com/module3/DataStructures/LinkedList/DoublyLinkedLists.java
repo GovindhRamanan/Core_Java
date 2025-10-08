@@ -62,6 +62,19 @@ public class DoublyLinkedLists {
 		else curr.next.prev=curr;
 		count--;
 	}
+	public void reverse() {
+		Node curr=first;
+		Node temp =null;
+		while(curr!=null) {
+			temp=curr.next;
+			curr.next=curr.prev;
+			curr.prev=temp;
+			curr=temp;	
+		}
+		Node n=first;
+		first=last;
+		last=n;
+	}
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
