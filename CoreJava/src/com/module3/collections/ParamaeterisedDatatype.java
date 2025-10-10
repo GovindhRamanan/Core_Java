@@ -1,17 +1,31 @@
-package com.module3.DataStructures.ArrayList;
+package com.module3.collections;
 
-public class ArrayLists {
+public class ParamaeterisedDatatype {
 
+		public static void main(String[] args) {
+			ArrayList<Integer> a=new ArrayList<Integer>();
+			a.add(10);
+			a.add(20);
+			a.add(30);
+			a.add(40);
+			a.insert(0, 70);
+			a.remove(0);
+			System.out.println(a);
+			for(int i=0;i<a.size();i++)System.out.println(a.get(i));
+		}
+
+}
+class ArrayList<E>{//Generic Type
 	private Object[] a=new Object[1];
 	private int p=0;//pointer for index value
 	
 	
-	public void add(Object e) {
+	public void add(E e) {
 		if(p>=a.length)increaseSize();
 		a[p++]=e;
 	}
 	
-	public void insert(int index,Object e) {
+	public void insert(int index,E e) {
 		//if(p<0||p>=size())-->doubt is cleared, if the index value is less than -1 it shows indexoutofboundexception
 		if(p>=size()) increaseSize();
 		for(int i=size()-1;i>=index;i--)a[i+1]=a[i];
@@ -30,9 +44,9 @@ public class ArrayLists {
 		return p;
 	}
 	
-	public Object get(int index) {
+	public E get(int index) {
 		if(index<0 ||index>=size()) throw new ArrayIndexOutOfBoundsException();
-		return a[index];
+		return (E)a[index];
 	}
 	
 	public void remove(int index) {
